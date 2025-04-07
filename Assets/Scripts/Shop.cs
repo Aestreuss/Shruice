@@ -46,7 +46,7 @@ public class Shop : MonoBehaviour
     }
     void BuyBlueShrimp()
     {
-        if (coinCheck == 20)
+        if (coinCheck >= 20)
         {
             GameObject newObject = Instantiate(blueberryShrimp, spawnPoint1.transform.position, Quaternion.identity);
             ui.SpentCoins();
