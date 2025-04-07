@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8629270548060337271}
   - component: {fileID: 8290240548420831955}
   - component: {fileID: -85917428375805762}
+  - component: {fileID: 1535190866482674117}
   m_Layer: 0
   m_Name: blueberry juice
   m_TagString: Juice
@@ -171,3 +172,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!111 &1535190866482674117
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580336361545393062}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1e8a0c748caacdf49878c2b423fd97c0, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

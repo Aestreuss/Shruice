@@ -13,4 +13,10 @@ public class UI : MonoBehaviour
         coinAmount += 10;
         coins.text = coinAmount.ToString();
     }
+
+    public void SpentCoins()
+    {
+        coinAmount -= 20;
+        coins.text = coinAmount.ToString();
+    }
 }

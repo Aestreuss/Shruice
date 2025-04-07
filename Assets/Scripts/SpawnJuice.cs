@@ -10,8 +10,9 @@ public class SpawnJuice : MonoBehaviour
     public float cooldownTime;
 
     public Transform spawnPoint;
- 
-    
+
+
+
     void Update()
     {
         SpawnOneJuice();
@@ -31,6 +32,5 @@ public class SpawnJuice : MonoBehaviour
     void ResetCooldown()
     {
         cooldown = false;
-
     }
 }
