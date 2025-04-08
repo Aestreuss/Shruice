@@ -31,5 +31,4 @@ public class Juice : MonoBehaviour
         mouseButtonReleased = true; //checks for mouse 
     }
 
-
 }

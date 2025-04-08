@@ -83,7 +83,7 @@ public class Shrimp : MonoBehaviour
         offsetY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
     }
 
-    private void OnMouseDrag()
+     void OnMouseDrag()
     {
         if (shrimpCanFeed == true)
         {
