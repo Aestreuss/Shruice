@@ -33,6 +33,11 @@ public class Shop : MonoBehaviour
         coinCheck += 10;
     }
 
+    void DeductCoins()
+    {
+        coinCheck -= 20;
+    }
+
     void OpenShop()
     {
         shopInterface.SetActive(true);
@@ -50,6 +55,7 @@ public class Shop : MonoBehaviour
         {
             GameObject newObject = Instantiate(blueberryShrimp, spawnPoint1.transform.position, Quaternion.identity);
             ui.SpentCoins();
+            DeductCoins();
         }
     }
 
