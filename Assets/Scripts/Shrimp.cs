@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,9 @@ public class Shrimp : MonoBehaviour
     [Header("shrimp grow time")]
     public Shop shrimpSpawn;
     public float shrimpGrowTime;
+    public float timer;
+    public float maxSize = 2f;
+
 
     public bool shrimpCanFeed = false;
 
@@ -47,10 +51,11 @@ public class Shrimp : MonoBehaviour
 
     }
 
+
     private void HasGrown()
     {
-        StopAllCoroutines();
         shrimpCanFeed = true;
+        StopAllCoroutines();
     }
 
     private void FindNewPos()

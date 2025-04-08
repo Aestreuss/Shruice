@@ -106,7 +106,9 @@ MonoBehaviour:
   speed: 2
   originalPos: {x: 0, y: 0}
   shrimpSpawn: {fileID: 0}
-  shrimpGrowTime: 10
+  shrimpGrowTime: 30
+  shrimpTarget: {x: 0, y: 0}
+  currentShrimp: 0
   shrimpCanFeed: 0
 --- !u!50 &7622216687730227670
 Rigidbody2D:
