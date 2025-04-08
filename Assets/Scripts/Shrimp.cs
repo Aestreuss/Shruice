@@ -16,9 +16,12 @@ public class Shrimp : MonoBehaviour
 
     [Header("shrimp grow time")]
     public Shop shrimpSpawn;
-    public float shrimpGrowTime;
-    public float timer;
-    public float maxSize = 2f;
+    public float shrimpGrowTime = 20f;
+    public float growspeed;
+    public float timer = 0f;
+    public float maxSize = 0.4f;
+
+    public bool isMaxSize = false;
 
 
     public bool shrimpCanFeed = false;
@@ -35,6 +38,12 @@ public class Shrimp : MonoBehaviour
     {
         shrimpSpawn = transform.GetComponent<Shop>();
         originalPos = transform.position;
+
+        if (!isMaxSize)
+        {
+            StartCoroutine(Grow());
+        }
+
         Invoke("HasGrown", shrimpGrowTime);
     }
 
@@ -49,6 +58,22 @@ public class Shrimp : MonoBehaviour
             transform.position = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * speed);
         }
 
+    }
+
+    private IEnumerator Grow()
+    {
+        Vector2 startScale = transform.localScale;
+        Vector2 maxScale = new Vector2(maxSize, maxSize);
+
+        do
+        {
+            transform.localScale = Vector2.Lerp(startScale, maxScale, timer / shrimpGrowTime);
+            timer += Time.deltaTime * growspeed;
+            yield return null;
+        }
+        while (timer < shrimpGrowTime);
+
+        isMaxSize = true;
     }
 
 
